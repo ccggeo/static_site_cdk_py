@@ -11,7 +11,7 @@ class CertsStack(core.Stack):
         super().__init__(scope, id, **kwargs)
  
         certificate = cm.Certificate(self, "certs",
-                                     domain_name=f"{stack_vars.bucket_name}"
+                                     domain_name=f"{stack_vars.bucket_name}",
                                      subject_alternative_names=[f"www.{stack_vars.bucket_name}"],
                                      validation_method=cm.ValidationMethod.DNS
                                      )
