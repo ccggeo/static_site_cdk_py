@@ -13,5 +13,4 @@ class CertsStack(core.Stack):
         certificate = cm.Certificate(self, "certs",
                                      domain_name=f"{stack_vars.bucket_name}",
                                      subject_alternative_names=[f"www.{stack_vars.bucket_name}"],
-                                     validation_method=cm.ValidationMethod.DNS
-                                     )
+                                     validation_method=cm.ValidationMethod.DNS)
